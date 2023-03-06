@@ -15,6 +15,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization":false,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
@@ -23,12 +24,12 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@api/*": ["src/app/api/*"],
   },
-  "paths": {
-    "@app/*": ["src/app/*"],
-    "@shared/*": ["src/app/shared/*"],
-    "@api/*": ["src/app/api/*"],
 },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

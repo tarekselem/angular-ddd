@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { ISearchFilters } from '@shared/models';
 import { TariffDto } from '../models';
 import { TARIFFS_DATA } from '../__mock__';
-import { ISearchFilters } from './tarrif-api.interface';
 
 @Injectable()
 export class ApiTariffsService {

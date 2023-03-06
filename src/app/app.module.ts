@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule, NavbarModule } from './shared/layouts';
+import { ApiModule } from './api';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { FooterModule, NavbarModule } from './shared/layouts';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    ApiModule,
     NavbarModule,
     FooterModule
   ],

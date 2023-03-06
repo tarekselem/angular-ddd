@@ -1,0 +1,3 @@
+<ng-container *ngFor="let tariff of data$ | async as tariffs; let i = index">
+  <app-tariff-details [data]="tariff"></app-tariff-details>
+</ng-container>
