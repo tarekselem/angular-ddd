@@ -1,4 +1,5 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -27,6 +28,7 @@
   "paths": {
     "@app/*": ["src/app/*"],
     "@shared/*": ["src/app/shared/*"],
+    "@api/*": ["src/app/api/*"],
 },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
