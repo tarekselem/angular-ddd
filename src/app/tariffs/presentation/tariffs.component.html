@@ -1,11 +1,8 @@
-<!-- <div *ngIf="data$ | async as data">{{ data | json }}</div> -->
-<div fxFill fxLayout="column" fxLayoutAlign="start center">
-  <div fxFlex="10">filters</div>
+<div fxLayout="column" fxLayoutAlign="start stretch">
+  <app-tariffs-filters
+    fxFlex="10"
+    class="default-spacing"
+  ></app-tariffs-filters>
 
-  <div fxFlex>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-  </div>
+  <app-tariffs-list fxFlex class="default-spacing"></app-tariffs-list>
 </div>

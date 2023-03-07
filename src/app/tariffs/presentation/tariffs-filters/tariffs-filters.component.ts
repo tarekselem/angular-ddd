@@ -13,9 +13,5 @@ import { Observable } from 'rxjs';
 export class TariffsFiltersComponent implements OnInit {
   constructor(private readonly dataRepository: TariffsRepository) {}
 
-  private readonly _searchFilters: ISearchFilters = { price: 18.7 };
-
-  data$: Observable<ITariff[]> = this.dataRepository.getAllTariffs();
-
   ngOnInit() {}
 }

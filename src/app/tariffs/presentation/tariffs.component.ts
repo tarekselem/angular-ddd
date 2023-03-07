@@ -1,8 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ISearchFilters } from '@app/shared/models';
-import { Observable } from 'rxjs';
-import { ITariff } from '../domain/models';
-import { TariffsRepository } from '../domain/repositories';
+import { TariffsService } from './tariffs.service';
 
 @Component({
   selector: 'app-tariffs',
@@ -11,11 +9,9 @@ import { TariffsRepository } from '../domain/repositories';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TariffsComponent implements OnInit {
-  constructor(private readonly dataRepository: TariffsRepository) {}
+  constructor(private readonly tariffsService: TariffsService) {}
 
   private readonly _searchFilters: ISearchFilters = { price: 18.7 };
-
-  data$: Observable<ITariff[]> = this.dataRepository.getAllTariffs();
 
   ngOnInit() {}
 }

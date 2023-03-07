@@ -1,6 +1,24 @@
-<div fxFill fxLayout="row" fxLayoutAlign="start center">
-  <div fxFlex>1</div>
-  <div fxFlex>2</div>
-  <div fxFlex>3</div>
-  <div fxFlex>4</div>
-</div>
+<mat-card>
+  <mat-card-content fxFill fxLayout="row" fxLayoutAlign="space-between stretch">
+    <div fxFlex fxFlex="20">{{ data.name }}</div>
+
+    <div fxFlex="10" fxLayout="column">
+      <div fxFlex>{{ data.downloadSpeed }}</div>
+      <div fxFlex>{{ data.uploadSpeed }}</div>
+    </div>
+
+    <ul fxFlex="40" fxHide.sm fxHide.xs fxShow.md>
+      <li *ngFor="let attribute of data.attributes; let i = index">
+        {{ attribute }}
+      </li>
+    </ul>
+
+    <div fxFlex="10" fxLayout="column" fxLayoutAlign="center center">
+      <span>{{ data.price | currency : 'EUR' }}</span>
+      <button mat-stroked-button color="primary" aria-label="Search">
+        <span fxHide.sm fxHide.xs fxShow.md>To Tariff</span>
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

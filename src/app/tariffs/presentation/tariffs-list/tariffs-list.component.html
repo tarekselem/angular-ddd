@@ -1,3 +1,12 @@
-<ng-container *ngFor="let tariff of data$ | async as tariffs; let i = index">
-  <app-tariff-details [data]="tariff"></app-tariff-details>
-</ng-container>
+<mat-card>
+  <mat-card-content
+    fxFill
+    fxLayout="column"
+    fxLayoutAlign="space-around stretch"
+    *ngFor="let tariff of data$ | async as tariffs; let i = index"
+  >
+    <app-tariff-details
+      fxFlex
+      [data]="tariff"
+    ></app-tariff-details> </mat-card-content
+></mat-card>
