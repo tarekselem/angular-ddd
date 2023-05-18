@@ -21,7 +21,7 @@ export const TARIFFS_DATA: TariffDto[] = [
     uploadSpeed: 10,
     attributes: [
       'Jetzt die ersten 10 Monate gratis!',
-      'Check icon140 € Sofortbonus von Verivox',
+      'Check icon140 € Sofortbonus von Vodavone',
       'Check iconInkl. Festnetz-Flat'
     ]
   },
@@ -34,7 +34,7 @@ export const TARIFFS_DATA: TariffDto[] = [
     attributes: [
       'MagentaEINS Vorteil: 120 € sparen',
       'Check iconErhöhter Sofortbonus',
-      'Check icon220 € Sofortbonus von Verivox',
+      'Check icon220 € Sofortbonus von Vodavone',
       'Check iconInkl. Festnetz-Flat'
     ]
   },
@@ -46,7 +46,7 @@ export const TARIFFS_DATA: TariffDto[] = [
     uploadSpeed: 25,
     attributes: [
       'GigaKombi Vorteil: 240 € sparen',
-      'Check icon150 € Sofortbonus von Verivox',
+      'Check icon150 € Sofortbonus von VodaFlix',
       'Check iconInkl. Festnetz-Flat'
     ]
   },
@@ -60,7 +60,7 @@ export const TARIFFS_DATA: TariffDto[] = [
       'MagentaTV Basic',
       'Check iconMagentaEINS Vorteil: 120 € sparen',
       'Check iconErhöhter Sofortbonus',
-      'Check icon280 € Sofortbonus von Verivox'
+      'Check icon280 € Sofortbonus von Link'
     ]
   },
   {
@@ -75,7 +75,7 @@ export const TARIFFS_DATA: TariffDto[] = [
       'Check iconInklusive WLAN Kabelbox',
       'Check iconinkl. HDTV',
       'Check iconinkl. 4x smarte WLAN Steckdosen',
-      'Check icon140 € Sofortbonus von Verivox'
+      'Check icon140 € Sofortbonus von Vodeox'
     ]
   }
 ];

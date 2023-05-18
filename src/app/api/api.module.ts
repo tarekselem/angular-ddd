@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
-import { ApiTariffsService } from './services';
+import { ApiTariffsService, ApiSportsService } from './services';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [],
   imports: [],
-  providers: [ApiTariffsService]
+  providers: [
+    {
+      provide: 'API_URL',
+      useValue: `${environment.apiUrl}/${environment.apiVersion}`
+    },
+    ApiTariffsService,
+    ApiSportsService
+  ]
 })
 export class ApiModule {}

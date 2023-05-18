@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ISearchFilters } from '@app/shared/models';
-import { TariffsService } from './tariffs.service';
+import { SportsService } from './sports.service';
 
 @Component({
-  selector: 'app-tariffs',
-  templateUrl: './tariffs.component.html',
-  styleUrls: ['./tariffs.component.scss'],
+  selector: 'app-sports',
+  templateUrl: './sports.component.html',
+  styleUrls: ['./sports.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TariffsComponent implements OnInit {
-  // constructor(private readonly tariffsService: TariffsService) {}
+export class SportsComponent implements OnInit {
+  constructor(private readonly sportsService: SportsService) {}
 
   private readonly _searchFilters: ISearchFilters = { price: 18.7 };
 

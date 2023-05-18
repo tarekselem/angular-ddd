@@ -12,8 +12,13 @@ const routes: Routes = [
             (m) => m.TariffsPageModule
           )
       },
-      { path: '', redirectTo: 'tariffs', pathMatch: 'full' },
-      { path: '**', redirectTo: 'tariffs' }
+      {
+        path: 'sports',
+        loadChildren: () =>
+          import('./pages/sports/sports.module').then((m) => m.SportsPageModule)
+      },
+      { path: '', redirectTo: 'sports', pathMatch: 'full' },
+      { path: '**', redirectTo: 'sports' }
     ]
   }
 ];
