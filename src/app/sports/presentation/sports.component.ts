@@ -11,7 +11,5 @@ import { SportsService } from './sports.service';
 export class SportsComponent implements OnInit {
   constructor(private readonly sportsService: SportsService) {}
 
-  private readonly _searchFilters: ISearchFilters = { price: 18.7 };
-
   ngOnInit() {}
 }

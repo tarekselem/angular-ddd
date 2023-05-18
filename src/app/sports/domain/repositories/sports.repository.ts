@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ISearchFilters } from '@shared/models';
-import { ITariff } from '../models';
+import { ISportTraining } from '../models';
 
 @Injectable()
 export abstract class SportsRepository {
-  abstract getAllTariffs(): Observable<ITariff[]>;
-  abstract searchTariffs(filters: ISearchFilters): Observable<ITariff[]>;
+  abstract searchTariffs(
+    latitude: number,
+    longitude: number
+  ): Observable<ISportTraining[]>;
 }

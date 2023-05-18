@@ -1,0 +1,79 @@
+<mat-card>
+  <mat-card-content fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxFlex="40">
+      <img [src]="data.thumb" />
+    </div>
+
+    <div fxFlex fxLayout="column">
+      <div
+        fxFlex="120px"
+        fxLayout="column"
+        fxLayoutAlign="space-between center"
+      >
+        <span class="mat-headline-5" fxFlex="5">{{
+          data.groupDetails.name
+        }}</span>
+        <span class="mat-body-1" fxFlex="5">{{ data.address }}</span>
+        <span class="mat-body-1" fxFlex="5">{{ data.groupDetails.email }}</span>
+
+        <div
+          fxFlex="50"
+          fxLayout="row"
+          fxLayoutAlign="space-between center"
+          fxLayoutGap="1rem"
+        >
+          <button
+            fxFlex
+            mat-icon-button
+            color="primary"
+            aria-label="Example icon button with a home icon"
+          >
+            <i class="fa fa-facebook" matTooltip="Tooltip!"></i>
+          </button>
+
+          <button
+            fxFlex
+            mat-icon-button
+            color="primary"
+            aria-label="Example icon button with a home icon"
+          >
+            <i class="fa fa-instagram"></i>
+          </button>
+          <button
+            fxFlex
+            mat-icon-button
+            color="primary"
+            aria-label="Example icon button with a home icon"
+          >
+            <i class="fa fa-whatsapp"></i>
+          </button>
+          <button
+            fxFlex
+            mat-icon-button
+            color="primary"
+            aria-label="Example icon button with a home icon"
+          >
+            <i class="fa fa-globe"></i>
+          </button>
+        </div>
+      </div>
+
+      <mat-divider style="margin: 1rem"></mat-divider>
+
+      <span
+        fxFlex="100px"
+        style="overflow: auto"
+        class="mat-body-1"
+        [innerHTML]="data.description"
+      ></span>
+    </div>
+
+    <!-- <div fxFlex="10" fxLayout="column" fxLayoutAlign="center center">
+       <span>{{ data.price | currency : 'EUR' }}</span> 
+     <button mat-stroked-button color="primary" aria-label="Search">
+        <span fxHide.sm fxHide.xs fxShow.md>To Tariff</span>
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+    </div> -->
+  </mat-card-content>
+</mat-card>

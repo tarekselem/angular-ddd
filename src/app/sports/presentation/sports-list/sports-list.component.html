@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-content
+    fxFill
+    fxLayoutGap="1rem"
+    fxLayout="column"
+    fxLayoutAlign="space-around stretch"
+  >
+    Totla copunt: 6
+    <app-sport-details
+      *ngFor="let tariff of data$ | async; let i = index"
+      fxFlex
+      [data]="tariff"
+    ></app-sport-details> </mat-card-content
+></mat-card>

@@ -1,1 +1,1 @@
-export * from './tariff.model';
+export * from './sport-training.model';

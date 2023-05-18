@@ -1,42 +1,25 @@
 import { Inject, Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { ISearchFilters } from '@shared/models';
-import { TariffDto } from '../models';
-import { TARIFFS_DATA } from '../__mock__';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { TrainingGroupsListDto } from '../models';
 
 @Injectable()
 export class ApiSportsService {
-  constructor(@Inject('API_URL') private apiURL: string) {
-    apiURL += '/training_groups_listing';
+  private readonly _apiURL: string;
+
+  constructor(
+    @Inject('API_URL') private readonly API_URL: string,
+    private readonly httpService: HttpClient
+  ) {
+    this._apiURL = API_URL + '/training_groups_listing';
   }
 
-  getAll(): Observable<TariffDto[]> {
-    console.log(this.apiURL);
-    return of(TARIFFS_DATA);
-  }
-
-  searchByFilters(filters: ISearchFilters): Observable<TariffDto[]> {
-    return of(this.geFilterdData(filters));
-  }
-
-  private geFilterdData(filters: ISearchFilters) {
-    return TARIFFS_DATA.filter(
-      ({ name, price, downloadSpeed, uploadSpeed, attributes }) =>
-        (filters.keyword &&
-          (name
-            .toLocaleLowerCase()
-            .includes(filters.keyword.toLocaleLowerCase()) ||
-            attributes.some(
-              (attr) =>
-                // skip TSC error
-                filters.keyword &&
-                attr
-                  .toLocaleLowerCase()
-                  .includes(filters.keyword.toLocaleLowerCase())
-            ))) ||
-        filters?.price === price ||
-        filters?.downloadSpeed === downloadSpeed ||
-        filters?.uploadSpeed === uploadSpeed
+  search(
+    latitude: number,
+    longitude: number
+  ): Observable<TrainingGroupsListDto> {
+    return this.httpService.get<TrainingGroupsListDto>(
+      `${this._apiURL}?&search[latitude]=${latitude}&search[longitude]=${longitude}`
     );
   }
 }

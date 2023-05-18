@@ -1,13 +1,13 @@
 import { SportsComponent } from './sports.component';
-import { TariffsListComponent, TariffDetailsComponent } from './tariffs-list';
-import { TariffsFiltersComponent } from './tariffs-filters';
+import { SportsListComponent, SportDetailsComponent } from './sports-list';
 import { SportsService } from './sports.service';
+import { SportsMapComponent } from './sports-map/sports-map.component';
 
 const COMPONENTS = [
   SportsComponent,
-  TariffsListComponent,
-  TariffDetailsComponent,
-  TariffsFiltersComponent
+  SportsListComponent,
+  SportDetailsComponent,
+  SportsMapComponent
 ];
 const PRESENTATION_SERVICES = [SportsService];
 
