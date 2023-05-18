@@ -1,9 +1,3 @@
-# Verivox
-
-![Alt text](./img/desktop.png 'Desktop Layout')
-![Alt text](./img/tablet.png 'Tablet Layout')
-![Alt text](./img/phone.png 'Mobile Layout')
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
